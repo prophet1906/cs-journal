@@ -31,7 +31,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.RecentNotes({ limit: 3 }),
+    Component.RecentNotes({ limit: 3, filter: (f) => f.slug! !== "index" }),
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
